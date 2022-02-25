@@ -7,7 +7,7 @@ Render::Render() {
     if(SDL_Init(SDL_INIT_EVERYTHING) < 0) {
         terminate("ERROR: SDL could not initialize", SDL_GetError());
     }
-    gRenderer = SDL_CreateRenderer(window->window, -1, SDL_RENDERER_ACCELERATED);
+    gRenderer = SDL_CreateRenderer(window->window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
     if(!gRenderer) {
         terminate("Renderer could not be created", SDL_GetError());
     }
