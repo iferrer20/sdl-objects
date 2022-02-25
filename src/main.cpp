@@ -1,8 +1,9 @@
 #include <iostream>
-
+#include "GE/GameEngine.hpp"
+#include <stdlib.h>
 
 int main() {
-
-    std::cout << "\n";
+    GE::window->setSize(1000, 1000);
+    GE::run();
     return 0;
 }

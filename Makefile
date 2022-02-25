@@ -10,9 +10,9 @@ DEP_FILES := $(patsubst $(SRC_DIR)%.cpp,$(OBJ_DIR)%.d,$(SRC_FILES))
 SRC_SUBDIRS := $(shell find $(SRC_DIR) -type d)
 OBJ_SUBDIRS := $(patsubst $(SRC_DIR)%,$(OBJ_DIR)%,$(SRC_SUBDIRS))
 
-CPPFLAGS += -O2 -Wall -std=c++20
+CPPFLAGS += -O2 -Wall -std=c++20 -I./include/
 
-LDFLAGS += 
+LDFLAGS += -lSDL2
 
 .PHONY: all clean
 
